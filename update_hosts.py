@@ -37,7 +37,8 @@ n += "# Last updated: " + time.ctime()
 n += "\n"
 for i in records:
 	x = records[i]
-	n += x['ip'] + "\t" + x['hostname'] + "\n"
+	if x['ip'] != '' and x['hostname'] != '':
+		n += x['ip'] + "\t" + x['hostname'] + "\n"
 
 print n
 
